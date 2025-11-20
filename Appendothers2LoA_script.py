@@ -1,8 +1,8 @@
 import os
 from PyPDF2 import PdfReader, PdfWriter
 
-folder = r"C:\Users\gonza\NUS Dropbox\NCL-Team\NCL Admin 2.0\NCLS scholarship docs\2025-2026 Sem 1 (Aug) Intake\Templates\Aug-25\LoA Aug-25"  # Change to your folder
-append_pdf_path = r"C:\Users\gonza\NUS Dropbox\NCL-Team\NCL Admin 2.0\NCLS scholarship docs\2025-2026 Sem 1 (Aug) Intake\Templates\Aug-25\LoA Aug-25\LoA_Aug25 2.pdf"  # Path to the PDF to append
+folder = r"<folder path>"  # Change to your folder
+append_pdf_path = r"<PDF to append>"  # Path to the PDF to append
 
 for filename in os.listdir(folder):
     if filename.lower().endswith(".pdf") and filename != os.path.basename(append_pdf_path):
@@ -26,5 +26,6 @@ for filename in os.listdir(folder):
         # Write the new PDF
         with open(output_path, "wb") as out_file:
             writer.write(out_file)
+
 
         print(f"Appended {append_pdf_path} to {pdf_path} -> {output_path}")

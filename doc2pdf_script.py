@@ -2,7 +2,7 @@
 import os
 import win32com.client
 
-folder = r"C:\Users\gonza\NUS Dropbox\NCL-Team\NCL Admin 2.0\NCLS scholarship docs\2025-2026 Sem 1 (Aug) Intake\Templates\Aug-25\LoA Aug-25"  # Change this to your folder path
+folder = r"<folder path>"  # Change this to your folder path
 
 print(f"Looking in: {folder}")
 print("Files found:", os.listdir(folder))
@@ -22,4 +22,5 @@ for filename in os.listdir(folder):
         print(f"Converted: {doc_path} -> {pdf_path}")
 
 word.Quit()
+
 print("All conversions done.")
